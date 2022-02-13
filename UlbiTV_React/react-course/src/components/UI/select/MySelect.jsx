@@ -1,10 +1,13 @@
-function MySelect({ options, defaultSelect }) {
+function MySelect({ options, defaultSelect, value, onChange }) {
   return (
     <div>
-      <select defaultValue={defaultSelect}>
-        <option disabled>{defaultSelect}</option>
+      <select
+        value={value}
+        onChange={(event) => onChange(event.target.value)}
+      >
+        <option disabled value="">{defaultSelect}</option>
         {options.map((option) => (
-          <option key={option.value} value={option.title}>
+          <option key={option.value} value={option.value}>
             {option.name}
           </option>
         ))}
