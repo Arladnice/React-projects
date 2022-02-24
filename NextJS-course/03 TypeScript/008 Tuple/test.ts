@@ -1,0 +1,1 @@
+const mas: [number, string, boolean] = [1, 'as', true]
