@@ -7,7 +7,7 @@ function Card({ addToFavorite, addToCart, id, imageUrl, title, price, favorited 
   const [isFavorite, setIsFavorite] = useState(favorited);
 
   const onClickPlus = () => {
-    addToCart({ title, price, imageUrl });
+    addToCart({ id, title, price, imageUrl });
     setIsAdded(!isAdded);
   };
 

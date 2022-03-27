@@ -16,7 +16,7 @@ function Drawer({ onRemove, onClose, items = [] }) {
           <div>
             <div className="items mb-30">
               {items.map((obj) => (
-                <div className="cart-item d-flex align-center mb-20">
+                <div key={obj.id} className="cart-item d-flex align-center mb-20">
                   <img
                     className="mr-20"
                     width={70}
