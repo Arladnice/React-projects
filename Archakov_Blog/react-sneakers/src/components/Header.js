@@ -1,5 +1,12 @@
+import { useContext } from 'react';
 import { Link } from "react-router-dom";
+import { AppContext } from '../App';
+
 function Header(props) {
+
+	const {cartItems} = useContext(AppContext)
+	console.log(cartItems);
+	console.log(cartItems.reduce((sum, obj) => obj.price + sum, 0))
   return (
     <header className="d-flex justify-between align-center p-40">
       <Link to="/">
