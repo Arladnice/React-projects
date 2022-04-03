@@ -10,6 +10,7 @@ function Drawer({ onRemove, onClose, items = [] }) {
   const [orderId, setOrderId] = useState(null);
   const [isOrderComplete, setIsOrderComplete] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+	const totalPrice = (cartItems.reduce((sum, obj) => Number(obj.price) + sum, 0))
 
   const onClickOrder = async () => {
     try {
@@ -79,12 +80,12 @@ function Drawer({ onRemove, onClose, items = [] }) {
                 <li className="d-flex">
                   <span>Итого:</span>
                   <div></div>
-                  <b>21 498 руб. </b>
+                  <b>{totalPrice + Math.floor(totalPrice / 100 * 5)} руб. </b>
                 </li>
                 <li className="d-flex">
                   <span>Налог 5%:</span>
                   <div></div>
-                  <b>1 074 руб.</b>
+                  <b>{Math.floor(totalPrice / 100 * 5)} руб.</b>
                 </li>
               </ul>
               <button

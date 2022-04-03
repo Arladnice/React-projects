@@ -5,8 +5,7 @@ import { AppContext } from '../App';
 function Header(props) {
 
 	const {cartItems} = useContext(AppContext)
-	console.log(cartItems);
-	console.log(cartItems.reduce((sum, obj) => obj.price + sum, 0))
+	const totalPrice = (cartItems.reduce((sum, obj) => Number(obj.price) + sum, 0))
   return (
     <header className="d-flex justify-between align-center p-40">
       <Link to="/">
@@ -28,7 +27,7 @@ function Header(props) {
             src="/img/cart.svg"
             className="mr-10"
           />
-          <span>1 205 руб.</span>
+          <span>{totalPrice} руб.</span>
         </li>
         <li className="mr-30 cu-p">
           <Link to="/favorites">
