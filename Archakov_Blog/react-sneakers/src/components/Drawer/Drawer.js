@@ -1,12 +1,15 @@
-import Info from "./Info";
+import Info from "../Info";
 import { useState } from "react";
-import { useCart } from '../hooks/useCart'
+import { useCart } from "../../hooks/useCart";
+
 import axios from "axios";
+
+import styles from "./Drawer.module.scss";
 
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-function Drawer({ onRemove, onClose, items = [] }) {
-	const { cartItems, setcartItems, totalPrice} = useCart();
+function Drawer({ onRemove, onClose, items = [], opened }) {
+  const { cartItems, setcartItems, totalPrice } = useCart();
   const [orderId, setOrderId] = useState(null);
   const [isOrderComplete, setIsOrderComplete] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -34,8 +37,8 @@ function Drawer({ onRemove, onClose, items = [] }) {
     setIsLoading(false);
   };
   return (
-    <div className="overlay">
-      <div className="drawer">
+    <div className={`${styles.overlay} ${opened ? styles.overlayVisible : ""}`}>
+      <div className={styles.drawer}>
         <h2 className="d-flex justify-between mb-30 ">
           Корзина
           <img
@@ -48,7 +51,7 @@ function Drawer({ onRemove, onClose, items = [] }) {
 
         {items.length > 0 ? (
           <div className="d-flex flex-column flex">
-            <div className="items mb-30">
+            <div className="items flex mb-30">
               {items.map((obj) => (
                 <div
                   key={obj.id}
@@ -79,12 +82,12 @@ function Drawer({ onRemove, onClose, items = [] }) {
                 <li className="d-flex">
                   <span>Итого:</span>
                   <div></div>
-                  <b>{totalPrice + Math.floor(totalPrice / 100 * 5)} руб. </b>
+                  <b>{totalPrice + Math.floor((totalPrice / 100) * 5)} руб. </b>
                 </li>
                 <li className="d-flex">
                   <span>Налог 5%:</span>
                   <div></div>
-                  <b>{Math.floor(totalPrice / 100 * 5)} руб.</b>
+                  <b>{Math.floor((totalPrice / 100) * 5)} руб.</b>
                 </li>
               </ul>
               <button
