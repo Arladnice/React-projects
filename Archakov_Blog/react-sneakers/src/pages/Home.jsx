@@ -9,7 +9,6 @@ function Home({
   onAddToCart,
   isLoading,
 }) {
-
   const renderItems = () => {
     const filteredItems = items.filter((item) =>
       item.title.toLowerCase().includes(searchValue.toLowerCase())
@@ -31,12 +30,12 @@ function Home({
           {searchValue ? `Поиск по запросу: "${searchValue}"` : `Все кроссовки`}
         </h1>
         <div className="search-block d-flex">
-          <img alt="Search" src="/img/search.svg" />
+          <img alt="Search" src="img/search.svg" />
           {searchValue && (
             <img
               onClick={clearValue}
               className="clear cu-p"
-              src="/img/btn-remove.svg"
+              src="img/btn-remove.svg"
               alt="Clear"
             />
           )}

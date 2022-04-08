@@ -1,24 +1,19 @@
-import React from 'react'
-import { AppContext } from '../App';
+import React from "react";
+import { AppContext } from "../App";
 
-const Info = ({image, title, description }) => {
-	const { setCartOpened } = React.useContext(AppContext);
+const Info = ({ image, title, description }) => {
+  const { setCartOpened } = React.useContext(AppContext);
   return (
     <div className="cart-empty d-flex align-center justify-center flex-column flex">
-      <img
-        className="mb-20"
-        width={120}
-        src={image}
-        alt="emptyCart"
-      />
+      <img className="mb-20" width={120} src={image} alt="emptyCart" />
       <h2>{title}</h2>
       <p className="opacity-6">{description}</p>
       <button onClick={() => setCartOpened(false)} className="green-button">
-        <img src="/img/arrow.svg" alt="Arrow" />
+        <img src="img/arrow.svg" alt="Arrow" />
         Вернуться назад
       </button>
     </div>
   );
 };
 
-export default Info
+export default Info;

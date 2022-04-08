@@ -2,7 +2,7 @@
   "name": "react-sneakers",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://arladnice.github.io/React-projects/Archakov_Blog/react-sneakers/build",
+  "homepage": "https://arladnice.github.io/React-projects/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.3",
