@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/React-projects/Archakov_Blog/react-sneakers/static/css/main.b5452a86.css",
-    "main.js": "/React-projects/Archakov_Blog/react-sneakers/static/js/main.1a46f7eb.js",
-    "index.html": "/React-projects/Archakov_Blog/react-sneakers/index.html",
-    "main.b5452a86.css.map": "/React-projects/Archakov_Blog/react-sneakers/static/css/main.b5452a86.css.map",
-    "main.1a46f7eb.js.map": "/React-projects/Archakov_Blog/react-sneakers/static/js/main.1a46f7eb.js.map"
+    "main.css": "/react-sneakers/static/css/main.b5452a86.css",
+    "main.js": "/react-sneakers/static/js/main.1a46f7eb.js",
+    "index.html": "/react-sneakers/index.html",
+    "main.b5452a86.css.map": "/react-sneakers/static/css/main.b5452a86.css.map",
+    "main.1a46f7eb.js.map": "/react-sneakers/static/js/main.1a46f7eb.js.map"
   },
   "entrypoints": [
     "static/css/main.b5452a86.css",
